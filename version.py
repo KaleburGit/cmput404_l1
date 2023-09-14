@@ -1,3 +1,7 @@
-from importlib.metadata import version
+import requests
 
-print(version('requests'))
+#print(requests.__version__)
+
+resp = requests.get("https://raw.githubusercontent.com/KaleburGit/cmput404_l1/main/version.py")
+
+print(resp.text)
